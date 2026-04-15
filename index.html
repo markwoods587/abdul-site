@@ -3,12 +3,54 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Md. Abdulla | SEO Expert Portfolio</title>
+      <title>Md. Abdulla | SEO Expert – Rank #1 on Google</title>
+
+      <!-- ── PRIMARY META ── -->
       <meta name="description" content="Md. Abdulla – Professional SEO Consultant with 3.5+ years & 100+ global projects. On-Page, Technical & Local SEO. Get your business to #1 on Google.">
+      <meta name="robots" content="index, follow">
+      <meta name="author" content="Md. Abdulla">
+      <meta name="keywords" content="SEO expert, SEO consultant, local SEO, technical SEO, Google ranking, GMB optimization, on-page SEO">
       <link rel="canonical" href="https://abdullaseo.vercel.app/" />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
-         rel="stylesheet">
+
+      <!-- ── OPEN GRAPH (Facebook / WhatsApp / LinkedIn preview) ── -->
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://abdullaseo.vercel.app/">
+      <meta property="og:title" content="Md. Abdulla | SEO Expert – Rank #1 on Google">
+      <meta property="og:description" content="Professional SEO Consultant with 3.5+ years & 100+ global projects. On-Page, Technical & Local SEO. Guaranteed Google rankings.">
+      <meta property="og:image" content="https://abdullaseo.vercel.app/og-image.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:locale" content="en_IN">
+      <meta property="og:site_name" content="Md. Abdulla SEO">
+
+      <!-- ── TWITTER CARD ── -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:url" content="https://abdullaseo.vercel.app/">
+      <meta name="twitter:title" content="Md. Abdulla | SEO Expert – Rank #1 on Google">
+      <meta name="twitter:description" content="Professional SEO Consultant with 3.5+ years & 100+ global projects. On-Page, Technical & Local SEO.">
+      <meta name="twitter:image" content="https://abdullaseo.vercel.app/og-image.jpg">
+
+      <!-- ── STRUCTURED DATA (JSON-LD) ── -->
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Md. Abdulla",
+        "jobTitle": "SEO Consultant",
+        "url": "https://abdullaseo.vercel.app/",
+        "email": "mdabdulla8474@gmail.com",
+        "telephone": "+916206091426",
+        "sameAs": ["https://www.linkedin.com/in/abdullaseo/"],
+        "knowsAbout": ["SEO", "Technical SEO", "Local SEO", "Google My Business", "Link Building"],
+        "description": "Professional SEO Consultant with 3.5+ years of experience helping 100+ businesses rank on Page 1 of Google."
+      }
+      </script>
+
+      <!-- ── FONT PERFORMANCE: preconnect first ── -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
       <link rel="stylesheet" href="style.css">
    </head>
    <body>
@@ -25,7 +67,22 @@
             <li><a href="#contact">Contact</a></li>
          </ul>
          <a href="https://api.whatsapp.com/send/?phone=%2B916206091426" target="_blank" class="nav-cta">Hire Me</a>
+         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+         </button>
       </nav>
+      <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+         <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#gmb-proof">GMB Proof</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=%2B916206091426" target="_blank" class="mobile-cta">Hire Me</a></li>
+         </ul>
+      </div>
       <!-- HERO -->
       <section id="home">
          <div class="hero-bg-circle c1"></div>
