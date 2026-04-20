@@ -1707,6 +1707,7 @@ footer {
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 12px;
+<<<<<<< HEAD
 	}
 }
 
@@ -1971,6 +1972,122 @@ footer {
 .mobile-sub-menu li a:hover {
 	color: var(--teal) !important;
 	background: rgba(0, 180, 216, 0.08);
+}
+
+/* ── PERFORMANCE: reduce motion ── */
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-badge::before,
+	.hero-ring {
+		animation: none;
+	}
+
+	.fade-in {
+		opacity: 1;
+		transform: none;
+=======
+>>>>>>> c4457f8ef9945ad029234f0cc91209ecc36c476a
+	}
+}
+
+/* ── HAMBURGER BUTTON ── */
+
+.nav-toggle {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+	width: 38px;
+	height: 38px;
+	background: transparent;
+	border: 1px solid rgba(0,180,216,0.3);
+	border-radius: 7px;
+	cursor: pointer;
+	padding: 7px;
+	flex-shrink: 0;
+}
+
+.nav-toggle span {
+	display: block;
+	height: 2px;
+	background: var(--teal);
+	border-radius: 2px;
+	transition: transform 0.25s, opacity 0.25s;
+}
+
+.nav-toggle.open span:nth-child(1) {
+	transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+	opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+	transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── MOBILE NAV DRAWER ── */
+
+.mobile-nav {
+	display: none;
+	position: fixed;
+	top: 65px;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background: rgba(10,26,46,0.98);
+	backdrop-filter: blur(16px);
+	border-bottom: 1px solid rgba(0,180,216,0.15);
+	padding: 16px 5%;
+	transform: translateY(-8px);
+	opacity: 0;
+	transition: opacity 0.25s, transform 0.25s;
+}
+
+.mobile-nav.open {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+	.mobile-nav {
+		display: block;
+	}
+}
+
+.mobile-nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.mobile-nav ul li a {
+	display: block;
+	padding: 12px 6px;
+	color: var(--muted);
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+	border-bottom: 1px solid rgba(255,255,255,0.05);
+	transition: color 0.2s;
+}
+
+.mobile-nav ul li a:hover {
+	color: var(--teal);
+}
+
+.mobile-nav .mobile-cta {
+	display: block;
+	margin-top: 10px;
+	background: var(--orange);
+	color: #fff !important;
+	text-align: center;
+	padding: 13px !important;
+	border-radius: 8px;
+	border-bottom: none !important;
+	font-weight: 600 !important;
 }
 
 /* ── PERFORMANCE: reduce motion ── */
