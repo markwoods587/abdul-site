@@ -1,3 +1,44 @@
+// ── LOCATIONS DROPDOWN (desktop) ──
+
+document.querySelectorAll('.nav-dropdown-item').forEach((item) => {
+	const btn = item.querySelector('.nav-dropdown-btn');
+	btn.addEventListener('click', (e) => {
+		e.stopPropagation(); // prevent document click from firing immediately
+		const isOpen = item.classList.contains('open');
+		// close all dropdowns first
+		document.querySelectorAll('.nav-dropdown-item').forEach((i) => {
+			i.classList.remove('open');
+			i.querySelector('.nav-dropdown-btn').setAttribute(
+				'aria-expanded',
+				'false',
+			);
+		});
+		if (!isOpen) {
+			item.classList.add('open');
+			btn.setAttribute('aria-expanded', 'true');
+		}
+	});
+});
+
+// Close dropdown when clicking anywhere else
+document.addEventListener('click', () => {
+	document.querySelectorAll('.nav-dropdown-item').forEach((i) => {
+		i.classList.remove('open');
+		i.querySelector('.nav-dropdown-btn').setAttribute('aria-expanded', 'false');
+	});
+});
+
+// ── LOCATIONS DROPDOWN (mobile) ──
+
+document.querySelectorAll('.mobile-dropdown-item').forEach((item) => {
+	const btn = item.querySelector('.mobile-dropdown-btn');
+	btn.addEventListener('click', () => {
+		const isOpen = item.classList.contains('open');
+		item.classList.toggle('open', !isOpen);
+		btn.setAttribute('aria-expanded', String(!isOpen));
+	});
+});
+
 // Scroll fade-in
 
 const observer = new IntersectionObserver(
